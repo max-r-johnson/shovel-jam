@@ -6,14 +6,11 @@ public partial class Player : Node2D
 	public Game game { get { return GameManager.Game; } }
 	public Minigame currentMinigame = Minigame.Overworld;
 	public float speed = 800f;
-	public Player()
-	{
-
-	}
 
 	public override void _Ready()
 	{
 		game.player = this;
+		GlobalPosition = game.playerOverworldPosition;
 	}
 
 	public override void _Process(double delta)

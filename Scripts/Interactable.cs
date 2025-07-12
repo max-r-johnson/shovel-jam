@@ -57,12 +57,22 @@ public partial class Interactable : Node2D
 	public void onStart()
 	{
 		GetTree().ChangeSceneToFile("res://Scenes/" + associatedMinigame + ".tscn");
+		if (game.currentMinigame == Minigame.Overworld)
+		{
+			game.playerOverworldPosition = game.player.GlobalPosition;
+		}
+		game.currentMinigame = associatedMinigame;
 		hideDescription();
 	}
 	
 	public void onUpgrades()
 	{
-		// GetTree().ChangeSceneToFile("res://Scenes/Shop.tscn");
+		GetTree().ChangeSceneToFile("res://Scenes/Shop.tscn");
+		if (game.currentMinigame == Minigame.Overworld)
+		{
+			game.playerOverworldPosition = game.player.GlobalPosition;
+		}
+		game.currentMinigame = associatedMinigame;
 		hideDescription();
 	}
 
