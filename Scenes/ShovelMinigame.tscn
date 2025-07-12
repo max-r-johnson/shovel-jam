@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsho7s76pnrb"]
+
+[ext_resource type="Script" uid="uid://cik0de7ymmt47" path="res://Scripts/ShovelerNode.cs" id="1_yvmxy"]
+[ext_resource type="Texture2D" uid="uid://b70a4op02ysrj" path="res://icon.svg" id="2_qhqlp"]
+
+[node name="ShovelMinigame" type="Node2D"]
+script = ExtResource("1_yvmxy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 646.0
+texture = ExtResource("2_qhqlp")

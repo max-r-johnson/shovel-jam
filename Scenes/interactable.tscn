@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bajarvypahyr2"]
+
+[ext_resource type="Texture2D" uid="uid://b70a4op02ysrj" path="res://icon.svg" id="1_8s6bd"]
+[ext_resource type="Script" uid="uid://bl53k5wmjrgym" path="res://Scripts/Interactable.cs" id="2_pmsje"]
+
+[node name="Interactable" type="Sprite2D"]
+texture = ExtResource("1_8s6bd")
+script = ExtResource("2_pmsje")
+
+[node name="Description" type="Label" parent="."]
+visible = false
+offset_left = -45.0
+offset_top = -114.0
+offset_right = 44.0
+offset_bottom = -91.0
+text = "Shovel Coal"
