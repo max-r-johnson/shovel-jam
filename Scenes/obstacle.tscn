@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cww3f2t1xrnbw"]
+
+[ext_resource type="Texture2D" uid="uid://b70a4op02ysrj" path="res://icon.svg" id="1_2p81s"]
+[ext_resource type="Script" uid="uid://jk7vveyi4mvs" path="res://Scripts/Obstacle.cs" id="2_rvx1i"]
+
+[node name="obstacle" type="Sprite2D"]
+texture = ExtResource("1_2p81s")
+script = ExtResource("2_rvx1i")

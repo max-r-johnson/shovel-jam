@@ -8,11 +8,18 @@ public partial class ShovelerNode : Node2D
     public override void _Ready()
     {
         game.currentNode = this;
-	}
+    }
 
     public override void _Process(double delta)
     {
 
     }
+
+//called when player selects an upgrade from the tree
+    public void incrementShovelUpgrade()
+    {
+
+    }
+    
 
 }

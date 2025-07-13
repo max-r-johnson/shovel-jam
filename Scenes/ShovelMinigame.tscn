@@ -1,12 +1,74 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsho7s76pnrb"]
+[gd_scene load_steps=11 format=3 uid="uid://dsho7s76pnrb"]
 
 [ext_resource type="Script" uid="uid://cik0de7ymmt47" path="res://Scripts/ShovelerNode.cs" id="1_yvmxy"]
 [ext_resource type="Texture2D" uid="uid://b70a4op02ysrj" path="res://icon.svg" id="2_qhqlp"]
+[ext_resource type="Script" uid="uid://c5vbd1wpwbwux" path="res://Scripts/ShovelController.cs" id="3_wjmqx"]
+[ext_resource type="PackedScene" uid="uid://cww3f2t1xrnbw" path="res://Scenes/obstacle.tscn" id="4_b8hgn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b8hgn"]
+radius = 39.1152
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ul805"]
+size = Vector2(1333, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nou5w"]
+size = Vector2(1329, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hpoj"]
+size = Vector2(20, 751)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0n3o3"]
+size = Vector2(20, 751)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjmqx"]
+size = Vector2(20, 93)
 
 [node name="ShovelMinigame" type="Node2D"]
 script = ExtResource("1_yvmxy")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1150.0
-offset_bottom = 646.0
+[node name="BG" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 721.0
 texture = ExtResource("2_qhqlp")
+
+[node name="Shovel" type="CharacterBody2D" parent="."]
+position = Vector2(135, 357)
+script = ExtResource("3_wjmqx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shovel"]
+visible = false
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_b8hgn")
+
+[node name="Top Boundary" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top Boundary"]
+position = Vector2(638.5, 11)
+shape = SubResource("RectangleShape2D_ul805")
+
+[node name="Bottom Boundary" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom Boundary"]
+position = Vector2(640.5, 716)
+shape = SubResource("RectangleShape2D_nou5w")
+
+[node name="Left Boundary" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Boundary"]
+position = Vector2(0, 365.5)
+shape = SubResource("RectangleShape2D_3hpoj")
+
+[node name="Right Boundary" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Boundary"]
+position = Vector2(1289, 370.5)
+shape = SubResource("RectangleShape2D_0n3o3")
+
+[node name="Goal" type="Area2D" parent="."]
+position = Vector2(1158, 358)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_wjmqx")
+
+[node name="obstacle" parent="." instance=ExtResource("4_b8hgn")]
