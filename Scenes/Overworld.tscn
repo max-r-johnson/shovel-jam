@@ -15,7 +15,7 @@ script = ExtResource("1_8lvve")
 texture = ExtResource("1_ctcok")
 script = ExtResource("2_7xrvl")
 
-[node name="ShovelMinigame" parent="." instance=ExtResource("4_8lvve")]
+[node name="ShovelMinigameIcon" parent="." instance=ExtResource("4_8lvve")]
 position = Vector2(860, 348)
 associatedMinigame = 1
 

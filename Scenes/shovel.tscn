@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b281fm5tm5svx"]
+
+[ext_resource type="Script" uid="uid://d2p6i1yko4rpi" path="res://Scripts/shovel.gd" id="1_o1hr1"]
+[ext_resource type="Texture2D" uid="uid://b70a4op02ysrj" path="res://icon.svg" id="2_m4ff3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b8hgn"]
+radius = 39.1152
+
+[node name="Shovel" type="CharacterBody2D"]
+script = ExtResource("1_o1hr1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_b8hgn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(0.539063, 0.546875)
+texture = ExtResource("2_m4ff3")
+
+[node name="Fire pos" type="Marker2D" parent="."]
+position = Vector2(41, 0)

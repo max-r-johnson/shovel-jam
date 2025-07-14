@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Obstacle : Sprite2D
+public partial class Obstacle : Area2D
 {
 	public Game game { get { return GameManager.Game; } }
 

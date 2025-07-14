@@ -2,11 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cik0de7ymmt47" path="res://Scripts/ShovelerNode.cs" id="1_yvmxy"]
 [ext_resource type="Texture2D" uid="uid://b70a4op02ysrj" path="res://icon.svg" id="2_qhqlp"]
-[ext_resource type="Script" uid="uid://c5vbd1wpwbwux" path="res://Scripts/ShovelController.cs" id="3_wjmqx"]
+[ext_resource type="PackedScene" uid="uid://b281fm5tm5svx" path="res://Scenes/shovel.tscn" id="3_ul805"]
 [ext_resource type="PackedScene" uid="uid://cww3f2t1xrnbw" path="res://Scenes/obstacle.tscn" id="4_b8hgn"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_b8hgn"]
-radius = 39.1152
+[ext_resource type="PackedScene" uid="uid://cte0t6oc6so7b" path="res://Scenes/projectile.tscn" id="5_ul805"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ul805"]
 size = Vector2(1333, 20)
@@ -31,14 +29,12 @@ offset_right = 1280.0
 offset_bottom = 721.0
 texture = ExtResource("2_qhqlp")
 
-[node name="Shovel" type="CharacterBody2D" parent="."]
-position = Vector2(135, 357)
-script = ExtResource("3_wjmqx")
+[node name="ProjectileManager" type="Node2D" parent="."]
+unique_name_in_owner = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shovel"]
-visible = false
-position = Vector2(0, 1)
-shape = SubResource("CircleShape2D_b8hgn")
+[node name="Shovel" parent="." instance=ExtResource("3_ul805")]
+position = Vector2(135, 357)
+Projectile = ExtResource("5_ul805")
 
 [node name="Top Boundary" type="Area2D" parent="."]
 
@@ -72,3 +68,9 @@ position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_wjmqx")
 
 [node name="obstacle" parent="." instance=ExtResource("4_b8hgn")]
+position = Vector2(600, 194)
+collision_mask = 2
+
+[node name="Projectile" parent="." instance=ExtResource("5_ul805")]
+position = Vector2(-74, 612)
+collision_mask = 2

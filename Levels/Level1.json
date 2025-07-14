@@ -1,32 +1,32 @@
 {
-    "waves": [
-        {
-            "waveNumber": 1,
-            "enemies" : [
-                ["Cow", 4]
-            ]
-        },
-        {
-            "waveNumber": 2,
-            "enemies" : [
-                ["Cow", 3],
-                ["Bull", 2]
-            ]
-        },
-        {
-            "waveNumber": 3,
-            "enemies" : [
-                ["Bull", 3],
-                ["Cow", 3]
-            ]
-        },
-        {
-            "waveNumber": 4,
-            "enemies" : [
-                ["Cow", 2],
-                ["Milk Mommy", 1],
-                ["Cow", 2]
-            ]
-        }
-    ]
+	"waves": [
+		{
+			"waveNumber": 1,
+			"enemies" : [
+				["Cow", 4]
+			]
+		},
+		{
+			"waveNumber": 2,
+			"enemies" : [
+				["Cow", 3],
+				["Bull", 2]
+			]
+		},
+		{
+			"waveNumber": 3,
+			"enemies" : [
+				["Bull", 3],
+				["Cow", 3]
+			]
+		},
+		{
+			"waveNumber": 4,
+			"enemies" : [
+				["Cow", 2],
+				["Milk Mommy", 1],
+				["Cow", 2]
+			]
+		}
+	]
 }
